@@ -3,7 +3,8 @@ package com.jinronara.common.exception;
 public class EvenException extends Exception {
 	private Integer number = null;
 
-	public EvenException() {
+	public EvenException(String message, Throwable cause) {
+		super(message, cause);
 	}
 
 	public EvenException(int number) {
