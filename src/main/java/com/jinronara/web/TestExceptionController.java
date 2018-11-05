@@ -18,7 +18,7 @@ public class TestExceptionController {
 			cn.setNumber(i);
 			try {
 				cn.check();
-			} catch (EvenException e) {				
+			} catch (EvenException e) {
 				System.out.println(e.getMessage());
 				e.printStackTrace();
 			}
@@ -26,7 +26,7 @@ public class TestExceptionController {
 
 		return "Even Exceptions Occured!";
 	}
-	
+
 	@GetMapping("/evenruntimeexception")
 	public String evenruntimeexception() {
 
@@ -44,19 +44,14 @@ public class TestExceptionController {
 
 		return "Even RuntimeExceptions Occured!";
 	}
-	
+
 	@GetMapping("/exception")
 	public String exception() {
 
 		CheckNumber cn = new CheckNumber();
 		for (int i = 0; i < 20; i++) {
 			cn.setNumber(i);
-			try {
-				cn.checkBiz(); 
-			} catch (BizException e) { 
-				System.out.println(e.getMessage());
-				e.printStackTrace();
-			}
+			cn.checkBiz();
 		}
 
 		return "BizExceptions Occured!";
