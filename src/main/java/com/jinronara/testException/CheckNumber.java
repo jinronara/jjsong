@@ -32,7 +32,7 @@ public class CheckNumber {
 		
 		try {
 			if ((number % 2) == 0) {
-				throw new EvenRuntimeException(number);
+				throw new NullPointerException();
 			} else {
 				System.out.println(Integer.toString(number) + " is Odd number");
 			}
