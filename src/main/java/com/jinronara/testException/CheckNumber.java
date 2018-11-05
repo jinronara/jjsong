@@ -6,7 +6,7 @@ import com.jinronara.common.exception.EvenRuntimeException;
 
 public class CheckNumber {
 	private int number;
-	private String string;
+	private String nullstring;
 
 	public CheckNumber() {
 
@@ -31,10 +31,11 @@ public class CheckNumber {
 	public void checkBiz() {
 		
 		try {
-			if ((number % 2) == 0) {
-				throw new NullPointerException();
+			if (!nullstring.isEmpty()) {
+				nullstring = null;
+				
 			} else {
-				System.out.println(Integer.toString(number) + " is Odd number");
+				System.out.println(nullstring);
 			}
 		} catch (NullPointerException ne){
 			throw new BizException("널이네욘.....", ne);
@@ -46,3 +47,7 @@ public class CheckNumber {
 		
 	}
 }
+
+
+
+
