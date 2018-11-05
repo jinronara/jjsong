@@ -20,6 +20,7 @@ public class TestExceptionController {
 			} catch (EvenException e) {
 				// TODO Auto-generated catch block
 				System.out.println(e.getMessage());
+				e.printStackTrace();
 			}
 		}
 
@@ -37,6 +38,7 @@ public class TestExceptionController {
 			} catch (EvenRuntimeException e) {
 				// TODO Auto-generated catch block
 				System.out.println(e.getMessage());
+				e.printStackTrace();
 			}
 		}
 
