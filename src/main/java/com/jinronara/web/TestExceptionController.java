@@ -53,7 +53,7 @@ public class TestExceptionController {
 			cn.setNumber(i);
 			try {
 				cn.checkBiz();
-			} catch (BizException e) {
+			} catch (BizException e) { 
 				System.out.println(e.getMessage());
 				e.printStackTrace();
 			}
