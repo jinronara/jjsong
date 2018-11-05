@@ -46,12 +46,13 @@ public class TestExceptionController {
 	}
 
 	@GetMapping("/exception")
-	public String exception() {
+	public String exception() throws InterruptedException {
 
 		CheckNumber cn = new CheckNumber();
 		for (int i = 0; i < 20; i++) {
 			cn.setNumber(i);
 			cn.checkBiz();
+			Thread.sleep(1000);
 		}
 
 		return "BizExceptions Occured!";
