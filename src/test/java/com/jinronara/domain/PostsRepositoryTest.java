@@ -33,17 +33,17 @@ public class PostsRepositoryTest {
     @Test
     public void 게시글저장_불러오기() {
         //given
-        postsRepository.save(Posts.builder()
+        postsRepository.save(PostsEntity.builder()
                 .title("테스트 게시글")
                 .content("테스트 본문")
                 .author("jojoldu@gmail.com")
                 .build());
 
         //when
-        List<Posts> postsList = (List<Posts>) postsRepository.findAll();
+        List<PostsEntity> postsList = (List<PostsEntity>) postsRepository.findAll();
 
         //then
-        Posts posts = postsList.get(0);
+        PostsEntity posts = postsList.get(0);
         assertThat(posts.getTitle(), is("테스트 게시글"));
         assertThat(posts.getContent(), is("테스트 본문"));
     }

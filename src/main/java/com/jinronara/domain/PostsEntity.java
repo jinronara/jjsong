@@ -3,9 +3,9 @@ package com.jinronara.domain;
 import javax.persistence.*;
 
 @Entity
-public class Posts {
+public class PostsEntity {
 
-	protected Posts() {
+	protected PostsEntity() {
 	}
 
 	@Id
@@ -33,7 +33,7 @@ public class Posts {
 		return author;
 	}
 
-	public Posts(String title, String content, String author) {
+	public PostsEntity(String title, String content, String author) {
 		this.title = title;
 		this.content = content;
 		this.author = author;
@@ -63,8 +63,8 @@ public class Posts {
 			return this;
 		}
 
-		public Posts build() {
-			return new Posts(title, content, author);
+		public PostsEntity build() {
+			return new PostsEntity(title, content, author);
 		}	   
 	            
 	}
