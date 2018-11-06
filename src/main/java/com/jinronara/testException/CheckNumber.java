@@ -2,7 +2,7 @@ package com.jinronara.testException;
 
 import com.jinronara.common.exception.BizException;
 import com.jinronara.common.exception.EvenException;
-import com.jinronara.common.exception.EvenRuntimeException;
+import java.lang.Exception;
 
 public class CheckNumber {
 	private int number;
@@ -14,15 +14,7 @@ public class CheckNumber {
 
 	public void check() throws EvenException {
 		if ((number % 2) == 0) {
-			throw new EvenException(number);
-		} else {
-			System.out.println(Integer.toString(number) + " is Odd number");
-		}
-	}
-	
-	public void checkRuntime() throws EvenRuntimeException {
-		if ((number % 2) == 0) {
-			throw new EvenRuntimeException(number);
+			throw new EvenException("저를 무시 해 주세요", new Exception());
 		} else {
 			System.out.println(Integer.toString(number) + " is Odd number");
 		}
@@ -38,7 +30,7 @@ public class CheckNumber {
 				System.out.println(nullstring);
 			}
 		} catch (NullPointerException ne){
-			throw new BizException("널이네욘.....", ne);
+			throw new BizException("비즈니스 예외입니다.", ne);
 		} 
 	}
 
